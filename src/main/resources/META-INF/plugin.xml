@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>io.github.newhoo.apollo-conf</id>
+    <name>Apollo Conf</name>
+    <vendor email="huzunrong@gmail.com" url="https://github.com/newhoo/apollo-conf-intellij-plugin">Apollo Conf</vendor>
+
+    <description><![CDATA[
+    <p>find Apollo conf and open it in browser</p>
+    <br/>
+    <p>快速打开Apollo配置中心</p>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    -->
+    <depends>com.intellij.modules.java</depends>
+
+    <idea-version since-build="181.0"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="io.github.newhoo.apollo.setting.PluginGlobalSetting"/>
+        <applicationConfigurable instance="io.github.newhoo.apollo.setting.SettingConfigurable"/>
+    </extensions>
+
+    <actions>
+        <!-- #e16531 -->
+        <action id="io.github.newhoo.apollo.ApolloOpenInBrowserAction"
+                class="io.github.newhoo.apollo.ApolloOpenInBrowserAction" text="Open Apollo"
+                icon="/img/apollo.png">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
