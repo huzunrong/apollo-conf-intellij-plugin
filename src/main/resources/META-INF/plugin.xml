@@ -1,13 +1,21 @@
 <idea-plugin>
     <id>io.github.newhoo.apollo-conf</id>
     <name>Apollo Conf</name>
-    <vendor email="huzunrong@gmail.com" url="https://github.com/newhoo/apollo-conf-intellij-plugin">Apollo Conf</vendor>
+    <vendor email="huzunrong@foxmail.com" url="https://github.com/huzunrong/apollo-conf-intellij-plugin">huzunrong</vendor>
 
     <description><![CDATA[
     <p>find Apollo conf and open it in browser</p>
     <br/>
     <p>快速打开Apollo配置中心</p>
     ]]></description>
+
+    <change-notes><![CDATA[
+        1.0.0
+        <ul>
+            <li>new plugin, just use it.</li>
+        </ul>
+      ]]>
+    </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
